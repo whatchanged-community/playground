@@ -65,7 +65,7 @@ const loading = ref(false);
 let template = ref(TEMPLATE_DEFAULT);
 
 const formReactive = reactive({
-  username: "axetroy",
+  username: "whatchanged-community",
   repo: "whatchanged",
   branch: "master",
   version: "HEAD~",
