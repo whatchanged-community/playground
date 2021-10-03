@@ -48,4 +48,4 @@ jobs:
           repository-name: whatchanged-community/whatchanged-community.github.io
           BRANCH: master # The branch the action should deploy to.
           FOLDER: ./dist # The folder the action should deploy.
-          single-commit: true
+          git-config-name: Github Action
