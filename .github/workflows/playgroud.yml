@@ -47,7 +47,6 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@4.1.5
         with:
           token: ${{ secrets.GH_TOKEN }}
-          repository-name: whatchanged-community/whatchanged-community.github.io
-          BRANCH: master # The branch the action should deploy to.
-          FOLDER: ./dist # The folder the action should deploy.
+          branch: docs # The branch the action should deploy to.
+          folder: ./dist # The folder the action should deploy.
           git-config-name: Github Action
