@@ -41,6 +41,8 @@ jobs:
           name: playground
           path: ./dist
 
+      - run: ls -lh
+
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@4.1.5
         with:
