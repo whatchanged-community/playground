@@ -1,7 +1,7 @@
 <template>
   <div style="position: relative">
     <a
-      src="https://github.com/whatchanged-community/whatchanged"
+      href="https://github.com/whatchanged-community"
       target="_blank"
       style="position: fixed; right: 0; top: 0"
     >
