@@ -11,10 +11,7 @@
     <div class="toolbar">
       <!-- <img style="max-width: 100%; max-height: 100%" src="./assets/logo.png" /> -->
       <a-form layout="inline" :model="form" @submit.native.prevent="onSubmit">
-        <a-form-item label="Username">
-          <a-input v-model:value="form.username.value" />
-        </a-form-item>
-        <a-form-item label="Repo">
+        <a-form-item label="Repository" style="width: 600px">
           <a-input v-model:value="form.repo.value" />
         </a-form-item>
         <a-form-item label="Branch">
@@ -65,8 +62,7 @@ const loading = ref(false);
 let template = ref(TEMPLATE_DEFAULT);
 
 const formReactive = reactive({
-  username: "whatchanged-community",
-  repo: "whatchanged",
+  repo: "https://github.com/whatchanged-community/whatchanged.git",
   branch: "master",
   version: "HEAD~",
 });
@@ -92,7 +88,6 @@ function syncQueryField(field, val) {
   window.history.pushState(null, null, url);
 }
 
-watchAndUpdateQuery("username");
 watchAndUpdateQuery("branch");
 watchAndUpdateQuery("repo");
 watchAndUpdateQuery("version");
@@ -114,7 +109,6 @@ function onSubmit() {
 
   const url = new URL(import.meta.env.VITE_API_HOST);
 
-  url.searchParams.append("username", formReactive.username || "");
   url.searchParams.append("repo", formReactive.repo || "");
   url.searchParams.append("branch", formReactive.branch || "");
   url.searchParams.append("version", formReactive.version || "");
