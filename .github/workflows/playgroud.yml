@@ -30,7 +30,7 @@ jobs:
 
   release:
     name: Release to Github
-    if: github.event_name == 'push' && startsWith(github.ref, 'refs/heads/master') && github.repository == 'whatchanged-community/whatchanged-community.github.io'
+    if: github.event_name == 'push' && startsWith(github.ref, 'refs/heads/master') && github.repository == 'release-lab/release-lab.github.io'
     needs: [ci]
     runs-on: ubuntu-latest
     steps:

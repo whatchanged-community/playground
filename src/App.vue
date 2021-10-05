@@ -1,7 +1,7 @@
 <template>
   <div style="position: relative">
     <a
-      href="https://github.com/whatchanged-community"
+      href="https://github.com/release-lab"
       target="_blank"
       style="position: fixed; right: 0; top: 0"
     >
@@ -62,7 +62,7 @@ const loading = ref(false);
 let template = ref(TEMPLATE_DEFAULT);
 
 const formReactive = reactive({
-  repo: "https://github.com/whatchanged-community/whatchanged.git",
+  repo: "https://github.com/release-lab/whatchanged.git",
   branch: "master",
   version: "HEAD~",
 });

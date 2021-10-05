@@ -1,3 +1,3 @@
-### source code for https://whatchanged-community.github.io
+### source code for https://release-lab.github.io
 
 ![screenshot.png](./screenshot.png)
