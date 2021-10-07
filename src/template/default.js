@@ -2,7 +2,7 @@ const TEMPLATE_DEFAULT = `## {{ .Version }} ({{ .Date }})
 
 {{- define "body" -}}
 {{range . -}}
-- {{if .Field.Header.Scope }}**{{ unescape .Field.Header.Scope }}**: {{ end }}{{ unescape .Field.Header.Subject }}({{ .HashURL }}) (@{{ unescape .Author.Name }}){{if .Field.Footer }} {{if .Field.Footer.Closes }}, Closes: {{ .Field.Footer.Closes }} {{- end }}  {{- end}}
+- {{if .Field.Header.Scope }}**{{ unescape .Field.Header.Scope }}**: {{ end }}{{ unescape .Field.Header.Subject }}({{ .HashURL }}) (@{{ unescape .Author.Name }})
 {{ end }}
 {{- end -}}
 
@@ -16,10 +16,45 @@ const TEMPLATE_DEFAULT = `## {{ .Version }} ({{ .Date }})
 {{ template "body" .Fix }}
 {{ end }}
 
+{{if .Refactor}}
+### 🔨 Code refactoring:
+{{ template "body" .Refactor }}
+{{- end -}}
+
+{{if .Test}}
+### 🧪 Testing:
+{{ template "body" .Test }}
+{{- end -}}
+
 {{if .Perf}}
 ### ⚡️ Performance improves:
 {{ template "body" .Perf }}
 {{ end }}
+
+{{if .Build}}
+### 🏗️ Build system:
+{{ template "body" .Build }}
+{{- end -}}
+
+{{if .Ci}}
+### 🚗 CI:
+{{ template "body" .Ci }}
+{{- end -}}
+
+{{if .Chore}}
+### 💡 Chore:
+{{ template "body" .Chore }}
+{{- end -}}
+
+{{if .Docs}}
+### 📚 Documentation:
+{{ template "body" .Docs }}
+{{- end -}}
+
+{{if .Style}}
+### 🌇 Style:
+{{ template "body" .Style }}
+{{- end -}}
 
 {{if .Revert}}
 ### 🔙 Revert:
@@ -37,17 +72,6 @@ const TEMPLATE_DEFAULT = `## {{ .Version }} ({{ .Date }})
 {{ unescape .Field.Footer.BreakingChange.Content }}
 
 {{ end -}}
-{{ end }}
-
-{{ $length := len .Commits }}
-
-{{if gt $length 0}}
-
-### 💪  Commits({{ len .Commits }}):
-{{range .Commits -}}
-- {{ .HashURL }} - {{ unescape .Field.Title }}
-{{ end }}
-
 {{ end }}
 `;
 
