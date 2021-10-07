@@ -1,11 +1,7 @@
 <template>
   <div style="position: relative">
-    <a
-      href="https://github.com/release-lab"
-      target="_blank"
-      style="position: fixed; right: 0; top: 0"
-    >
-      <img :src="githubLogoUrl" style="width: 60px; height: 60px" />
+    <a href="https://github.com/release-lab" target="_blank" style="position: fixed; right: 0; top: 0">
+      <img src="./assets/github.svg" style="width: 60px; height: 60px" />
     </a>
 
     <div class="toolbar">
@@ -53,13 +49,9 @@ import copy from "https://esm.sh/copy-to-clipboard";
 import { message, notification } from "ant-design-vue";
 import Render from "./components/Render.vue";
 import CodeMirror from "./components/CodeMirror.vue";
-import TEMPLATE_DEFAULT from "./template/default";
-import github from "./assets/github.svg";
-
-const githubLogoUrl = ref(github);
 
 const loading = ref(false);
-let template = ref(TEMPLATE_DEFAULT);
+const template = ref("");
 
 const formReactive = reactive({
   repo: "https://github.com/release-lab/whatchanged.git",
@@ -143,13 +135,6 @@ function copyURL() {
 }
 
 onMounted(() => {
-  notification.warn({
-    message: "IMPORTANT",
-    description:
-      "Hi ❤️ We are useing the free resources for backend and there is a limit to the memory size. so, it may fail to generate for large projects.",
-    duration: 30,
-  });
-
   const url = new URL(window.location.href);
 
   let params = 0;
@@ -176,6 +161,17 @@ onMounted(() => {
   if (url.searchParams.has("tpl")) {
     params++;
     template.value = url.searchParams.get("tpl");
+  } else {
+    const url = new URL(import.meta.env.VITE_API_HOST);
+
+    url.pathname = "/template";
+
+    fetch(url)
+      .then((res) => res.text())
+      .then((markdown) => {
+        console.log(markdown);
+        template.value = markdown;
+      });
   }
 
   if (params === 3 && formReactive.username && formReactive.repo) {
