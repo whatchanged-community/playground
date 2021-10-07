@@ -28,12 +28,7 @@
     <div class="container">
       <div class="left">
         <div style="display: flex; height: 100%; padding-left: 10px">
-          <CodeMirror
-            class="my-editor2"
-            :content.sync="template"
-            :readonly="true"
-            @update:content="template = $event"
-          />
+          <CodeMirror ref="editor" v-model:template="template" :readonly="true" />
         </div>
       </div>
       <div class="right">
@@ -51,6 +46,7 @@ import Render from "./components/Render.vue";
 import CodeMirror from "./components/CodeMirror.vue";
 
 const loading = ref(false);
+const editor = ref(null);
 const template = ref("");
 
 const formReactive = reactive({
@@ -169,8 +165,8 @@ onMounted(() => {
     fetch(url)
       .then((res) => res.text())
       .then((markdown) => {
-        console.log(markdown);
         template.value = markdown;
+        editor.value.update(template.value);
       });
   }
 

@@ -1,13 +1,11 @@
 <template>
-  <a-spin :spinning="loading">
-    <div class="my-editor" v-bind="$attrs">
-      <textarea ref="input"></textarea>
-    </div>
-  </a-spin>
+  <div class="my-editor">
+    <textarea ref="input"></textarea>
+  </div>
 </template>
 
 <script setup>
-import { onMounted, ref, toRefs, watch } from "vue";
+import { onMounted, ref, toRefs } from "vue";
 import CodeMirror from "https://cdn.jsdelivr.net/npm/codemirror/src/codemirror.js";
 
 const props = defineProps({
@@ -23,10 +21,6 @@ const emit = defineEmits(["update:content"]);
 let editor;
 
 const input = ref(null);
-
-watch(content, () => {
-  update(content.value);
-});
 
 onMounted(() => {
   editor = CodeMirror.fromTextArea(input.value, {
@@ -45,20 +39,19 @@ onMounted(() => {
 function update(value) {
   editor.doc.setValue(value);
 }
+
+defineExpose({
+  update: update,
+});
 </script>
 
 <style lang="scss" scoped>
-:deep(.my-editor) {
+.my-editor {
   width: 100%;
-  .CodeMirror {
-    height: calc(100vh - 60px - 46px);
-  }
-}
+  height: 100%;
 
-:deep(.my-editor2) {
-  width: 100%;
-  .CodeMirror {
-    height: calc(100vh - 60px);
+  :deep(.CodeMirror) {
+    height: 100%;
   }
 }
 </style>
