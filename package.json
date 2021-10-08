@@ -9,7 +9,7 @@
   "dependencies": {
     "ant-design-vue": "2.2.8",
     "marked": "3.0.7",
-    "vue": "3.2.19"
+    "vue": "3.2.20"
   },
   "devDependencies": {
     "@types/marked": "3.0.1",
