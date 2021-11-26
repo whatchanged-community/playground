@@ -14,7 +14,7 @@
   "devDependencies": {
     "@types/marked": "3.0.3",
     "@types/node": "16.11.7",
-    "@vitejs/plugin-vue": "1.10.0",
+    "@vitejs/plugin-vue": "1.10.1",
     "@vue/compiler-sfc": "3.2.23",
     "cross-env": "7.0.3",
     "import-http": "0.3.1",
