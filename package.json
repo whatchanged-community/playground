@@ -8,11 +8,11 @@
   },
   "dependencies": {
     "ant-design-vue": "2.2.8",
-    "marked": "3.0.8",
+    "marked": "4.0.10",
     "vue": "3.2.28"
   },
   "devDependencies": {
-    "@types/marked": "3.0.3",
+    "@types/marked": "4.0.1",
     "@types/node": "16.11.21",
     "@vitejs/plugin-vue": "2.1.0",
     "@vue/compiler-sfc": "3.2.28",
