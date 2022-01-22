@@ -8,7 +8,7 @@
 
 <script setup>
 import { computed, toRefs } from "vue";
-import marked from "marked";
+import { marked } from "marked";
 
 const props = defineProps({
   content: String,
