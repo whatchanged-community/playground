@@ -9,13 +9,13 @@
   "dependencies": {
     "ant-design-vue": "2.2.8",
     "marked": "4.0.12",
-    "vue": "3.2.30"
+    "vue": "3.2.31"
   },
   "devDependencies": {
     "@types/marked": "4.0.2",
     "@types/node": "16.11.24",
     "@vitejs/plugin-vue": "2.2.0",
-    "@vue/compiler-sfc": "3.2.30",
+    "@vue/compiler-sfc": "3.2.31",
     "cross-env": "7.0.3",
     "import-http": "0.3.1",
     "sass": "1.49.7",
