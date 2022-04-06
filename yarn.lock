@@ -186,10 +186,10 @@
   resolved "https://registry.yarnpkg.com/@vue/shared/-/shared-3.2.31.tgz#c90de7126d833dcd3a4c7534d534be2fb41faa4e"
   integrity sha512-ymN2pj6zEjiKJZbrf98UM2pfDd6F2H7ksKw7NDt/ZZ1fh5Ei39X5tABugtT03ZRlWd9imccoK0hE8hpjpU7irQ==
 
-ant-design-vue@3.1.0:
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/ant-design-vue/-/ant-design-vue-3.1.0.tgz#4214bcc40550e0e2fc72f648a892c625be5389ef"
-  integrity sha512-PmfR0kkbdq8pmz9U7AriYjYmn7VvIk/RCFowwmiqdsGmYfGnOkEbAA6uOM/9DzTxuVoqmff+AZyHPhs8ZTBk7w==
+ant-design-vue@3.1.1:
+  version "3.1.1"
+  resolved "https://registry.yarnpkg.com/ant-design-vue/-/ant-design-vue-3.1.1.tgz#429368057bc445975b3e6ee498915d5bd66e0e87"
+  integrity sha512-QcnESmPllfyPy4SavOlf1jml/bdmzCIcCgYWRwl0WKG5jbuuOQ0vhgfUCC2rI6R+84gb/qf4/0qoZnWcEyQziA==
   dependencies:
     "@ant-design/colors" "^6.0.0"
     "@ant-design/icons-vue" "^6.1.0"
