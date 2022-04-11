@@ -18,7 +18,7 @@
     "@vue/compiler-sfc": "3.2.31",
     "cross-env": "7.0.3",
     "import-http": "0.3.1",
-    "sass": "1.49.11",
+    "sass": "1.50.0",
     "unplugin-vue-components": "0.19.2",
     "vite": "2.9.1"
   }
