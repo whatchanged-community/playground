@@ -873,10 +873,10 @@ to-regex-range@^5.0.1:
   dependencies:
     is-number "^7.0.0"
 
-unplugin-vue-components@0.19.0:
-  version "0.19.0"
-  resolved "https://registry.yarnpkg.com/unplugin-vue-components/-/unplugin-vue-components-0.19.0.tgz#73b9b1fb5eaebbbeb4755eadf1a1cf7b49ce2203"
-  integrity sha512-x9fclW9WPifXli4+bIJxIywQPssnQxbr7cFr1yEC7NuRvGhFDIDQZ8NqxE53/ZDLVJvDm0PnOSvuzLgQMeOd2g==
+unplugin-vue-components@0.19.2:
+  version "0.19.2"
+  resolved "https://registry.yarnpkg.com/unplugin-vue-components/-/unplugin-vue-components-0.19.2.tgz#960fa9983102b821ab21e873a77ae75795b589c6"
+  integrity sha512-7DhQfTyHLyVIWR6VBQONLU6dDBOXtEYvZQYUpN9C+t11WOb5baIFoxfzDxkeFHTHGMhznyEOw6afHyV9JKWnig==
   dependencies:
     "@antfu/utils" "^0.5.0"
     "@rollup/pluginutils" "^4.2.0"
