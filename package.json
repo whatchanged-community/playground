@@ -20,6 +20,6 @@
     "import-http": "0.3.1",
     "sass": "1.50.1",
     "unplugin-vue-components": "0.19.3",
-    "vite": "2.9.5"
+    "vite": "2.9.8"
   }
 }
