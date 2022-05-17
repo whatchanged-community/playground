@@ -13,7 +13,7 @@
   },
   "devDependencies": {
     "@types/marked": "4.0.3",
-    "@types/node": "16.11.35",
+    "@types/node": "16.11.36",
     "@vitejs/plugin-vue": "2.3.2",
     "@vue/compiler-sfc": "3.2.33",
     "cross-env": "7.0.3",
