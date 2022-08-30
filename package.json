@@ -19,7 +19,7 @@
     "cross-env": "7.0.3",
     "import-http": "0.3.1",
     "sass": "1.54.6",
-    "unplugin-vue-components": "0.21.2",
+    "unplugin-vue-components": "0.22.4",
     "vite": "3.0.4"
   }
 }
