@@ -107,10 +107,10 @@
   resolved "https://registry.yarnpkg.com/@types/marked/-/marked-4.0.5.tgz#3e900fa331a9b1a98f7a8a50f0f39b4bf2b6469f"
   integrity sha512-jMN2moJ+lSf1VZXQo3VXeMCjoXuciVONig8+U0YNBop5aBvQw4qkolx1Nzn1i0T8L2l9IZ3jju6bS1pPwlaY1w==
 
-"@types/node@16.11.41":
-  version "16.11.41"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-16.11.41.tgz#88eb485b1bfdb4c224d878b7832239536aa2f813"
-  integrity sha512-mqoYK2TnVjdkGk8qXAVGc/x9nSaTpSrFaGFm43BUH3IdoBV0nta6hYaGmdOvIMlbHJbUEVen3gvwpwovAZKNdQ==
+"@types/node@16.18.23":
+  version "16.18.23"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-16.18.23.tgz#b6e934fe427eb7081d0015aad070acb3373c3c90"
+  integrity sha512-XAMpaw1s1+6zM+jn2tmw8MyaRDIJfXxqmIQIS0HfoGYPuf7dUWeiUKopwq13KFX9lEp1+THGtlaaYx39Nxr58g==
 
 "@vitejs/plugin-vue@4.1.0":
   version "4.1.0"
